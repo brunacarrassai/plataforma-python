@@ -11,7 +11,7 @@ const validate = (schema, target = 'body') => {
         });
 
         if (error) {
-            const errors = error.details.map((d) => message);
+            const errors = error.details.map((d) => d.message);
             return res.status(400).json({
                 error: 'Dados inválidos',
                 datails: errors,

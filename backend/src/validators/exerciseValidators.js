@@ -75,19 +75,20 @@ const submitSchema = Joi.object({
         }),
 
         testResults: Joi.array()
-            .items(
-                Joi.object({
-                    passed: Joi.boolean().required(),
-                    output: Joi.string().allow('').default(''),
-                    expected: Joi.string().allow('').default(''),
-                })
-            )
-            .min(1)
-            .required()
-            .messages({
-                'array.min': 'testResults não pode ser vazio',
-                'any.required': 'testResults é obrigatório',
-            }),
+  .items(
+    Joi.object({
+      passed: Joi.boolean().required(),
+      output: Joi.string().allow('', null).default(''),
+      expected: Joi.string().allow('', null).default(''),
+      error: Joi.any().optional(),
+    })
+  )
+  .min(1)
+  .required()
+  .messages({
+    'array.min': 'testResults não pode ser vazio',
+    'any.required': 'testResults é obrigatório',
+  }),
 });
 
 module.exports = { createExerciseSchema, listExercisesSchema, submitSchema };
