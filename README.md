@@ -8,32 +8,34 @@ A full-stack web application for learning Python through hands-on exercises with
 
 ## Screenshots
 
-<table>
-  <tr>
-    <td><b>Login</b></td>
-    <td><b>Exercise List</b></td>
-  </tr>
-  <tr>
-    <td><img src="screenshots/login.png" width="400"/></td>
-    <td><img src="screenshots/exercises.png" width="400"/></td>
-  </tr>
-  <tr>
-    <td><b>Code Editor + Test Results</b></td>
-    <td><b>Output Tab</b></td>
-  </tr>
-  <tr>
-    <td><img src="screenshots/editor.png" width="400"/></td>
-    <td><img src="screenshots/output.png" width="400"/></td>
-  </tr>
-  <tr>
-    <td><b>Dashboard</b></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><img src="screenshots/dashboard.png" width="400"/></td>
-    <td></td>
-  </tr>
-</table>
+<div align="center">
+  <table>
+    <tr>
+      <td><b>Login</b></td>
+      <td><b>Exercise List</b></td>
+    </tr>
+    <tr>
+      <td><img src="screenshots/login.png" width="400"/></td>
+      <td><img src="screenshots/exercises.png" width="400"/></td>
+    </tr>
+    <tr>
+      <td><b>Code Editor + Test Results</b></td>
+      <td><b>Output Tab</b></td>
+    </tr>
+    <tr>
+      <td><img src="screenshots/editor.png" width="400"/></td>
+      <td><img src="screenshots/output.png" width="400"/></td>
+    </tr>
+    <tr>
+      <td><b>Dashboard</b></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="screenshots/dashboard.png" width="400"/></td>
+      <td></td>
+    </tr>
+  </table>
+</div>
 
 ---
 
@@ -51,6 +53,8 @@ A full-stack web application for learning Python through hands-on exercises with
 
 ## Tech Stack
 
+<div align="center">
+  
 ### Frontend
 | Technology | Purpose |
 |---|---|
@@ -78,18 +82,21 @@ A full-stack web application for learning Python through hands-on exercises with
 | MongoDB Atlas | Cloud database |
 | GitHub | Version control |
 
+</div>
+
 ---
 
 ## Architecture
 
 ```
+
 ┌──────────────────────────────────────────────┐
 │                Browser (Client)              │
 │                                              │
-│   React App  ←────────→  Monaco Editor      │
+│   React App  ←────────→  Monaco Editor       │
 │       │                       │              │
 │   REST API              Pyodide (WASM)       │
-│   (axios)            Python runs here! 🐍    │
+│   (axios)            Python runs here!       │
 └───────┬──────────────────────────────────────┘
         │ HTTPS
         ▼
@@ -107,6 +114,7 @@ A full-stack web application for learning Python through hands-on exercises with
 │                                              │
 │  users       exercises       progress        │
 └──────────────────────────────────────────────┘
+
 ```
 
 ### How Python execution works
